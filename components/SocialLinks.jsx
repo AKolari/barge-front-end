@@ -13,33 +13,40 @@ function SocialLinks() {
       {links.map(function (i) {
         return (
           <div key={i.id}>
-            {i.title === "Facebook" && (
-              <Image
-                src={facebook}
-                alt={i.title}
-                height={37}
-                width={45}
-              ></Image>
-            )}
-            {i.title === "Twitter" && (
-              <Image src={twitter} alt={i.title} height={37} width={45}></Image>
-            )}
-            {i.title === "Instagram" && (
-              <Image
-                src={instagram}
-                alt={i.title}
-                height={37}
-                width={45}
-              ></Image>
-            )}
-            {i.title === "Snapchat" && (
-              <Image
-                src={snapchat}
-                alt={i.title}
-                height={37}
-                width={45}
-              ></Image>
-            )}
+            <a key={i.id} href={i.url}>
+              {i.title === "Facebook" && (
+                <Image
+                  src={facebook}
+                  alt={i.title}
+                  height={37}
+                  width={45}
+                ></Image>
+              )}
+              {i.title === "Twitter" && (
+                <Image
+                  src={twitter}
+                  alt={i.title}
+                  height={37}
+                  width={45}
+                ></Image>
+              )}
+              {i.title === "Instagram" && (
+                <Image
+                  src={instagram}
+                  alt={i.title}
+                  height={37}
+                  width={45}
+                ></Image>
+              )}
+              {i.title === "Snapchat" && (
+                <Image
+                  src={snapchat}
+                  alt={i.title}
+                  height={37}
+                  width={45}
+                ></Image>
+              )}
+            </a>
           </div>
         );
       })}
